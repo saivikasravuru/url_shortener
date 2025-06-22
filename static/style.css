@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #dbeafe, #fef9ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px 40px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    background-clip: text; /* ✅ Add this */
+    -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+input[type="url"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button,
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.gradient-btn {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    color: white;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(to right, #4f46e5, #9333ea);
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6366f1;
+}
+
+.toast {
+    display: none;
+    color: limegreen;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: fadeInOut 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.qr-image {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.qr-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.output-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.click-count {
+    margin: 20px 0;
+    font-size: 18px;
+}

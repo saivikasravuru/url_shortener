@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Shortened URL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container card">
+        <h2 class="gradient-text">✅ Your Short URL is Ready!</h2>
+
+        <div class="output-box">
+            <input type="text" id="shortUrl" value="{{ short_url }}" readonly>
+            <button onclick="copyToClipboard()" class="btn-icon"><i class="bi bi-clipboard"></i></button>
+        </div>
+        <p id="copyMsg" class="toast">Copied!</p>
+
+        <div class="qr-section">
+            <h3>🔳 QR Code</h3>
+            <img src="{{ qr_url }}" alt="QR Code" class="qr-image">
+            <div class="qr-buttons">
+                <a href="{{ qr_url }}" download class="btn">⬇ Download</a>
+                <a href="{{ short_url }}" target="_blank" class="btn">🔗 Test URL</a>
+            </div>
+        </div>
+
+        <div class="click-count">
+            <strong>Clicks:</strong> <span id="clicks">0</span>
+        </div>
+
+        <form action="{{ url_for('index') }}">
+            <button type="submit" class="btn btn-secondary">🔄 Shorten Another</button>
+        </form>
+
+        <script>
+            const shortCode = "{{ short_code }}";
+            fetch(`/clicks/${shortCode}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('clicks').innerText = data.clicks;
+                });
+        </script>
+    </div>
+</body>
+</html>

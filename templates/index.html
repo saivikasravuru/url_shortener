@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container card">
+        <h1 class="gradient-text">🔗 Creative URL Shortener</h1>
+        <p class="subheading">Paste a long link and we'll make it short & smart!</p>
+
+        <form method="POST">
+            <input type="url" name="url" placeholder="Enter your long URL..." required>
+            <button type="submit" class="btn gradient-btn">Shorten URL 🔥</button>
+        </form>
+    </div>
+</body>
+</html>
