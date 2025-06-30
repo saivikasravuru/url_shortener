@@ -1,6 +1,6 @@
 # 🔗 URL Shortener with QR Code
 
-An interactive web app that shortens long URLs, generates **QR codes**, and tracks click statistics — built using **Flask**, **SQLite**, and **Vanilla JavaScript**.
+An interactive web app that shortens long URLs, generates **QR codes**, and tracks click statistics — built using **Flask**, **SQLite**, and **Vanilla JavaScript**. 
 
 🧠 Ideal for sharing compact links with added scan-ability and real-time analytics.
 
